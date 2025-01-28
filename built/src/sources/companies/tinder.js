@@ -3,15 +3,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TinderAudit = void 0;
 const tinder_1 = require("../scraping/tinder");
 const tinder_2 = require("../firecrawl/tinder");
+const gpt_1 = require("../../lib/openai/gpt");
 class TinderAudit {
     async audit(input) {
         const { browser, searches } = input;
         const searchResults = [];
+        const finalResults = [];
         for (const searchConfig of searches) {
+            const { source } = searchConfig;
             const data = await this.helper(browser, searchConfig);
             searchResults.push(data);
+            if (source !== "firecrawl" && searchConfig.aiFilter) {
+                console.log("AI filtering for Figma");
+                const processed = await (0, gpt_1.filterJobs)(data);
+                finalResults.push(processed);
+            }
+            else {
+                finalResults.push(data);
+            }
         }
-        return { searchResults };
+        return { searchResults, finalResults };
     }
     async helper(browser, searchConfig) {
         const { source } = searchConfig;

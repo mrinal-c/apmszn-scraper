@@ -17,6 +17,9 @@ class FigmaAudit {
                 const processed = await (0, gpt_1.filterJobs)(data);
                 finalResults.push(processed);
             }
+            else {
+                finalResults.push(data);
+            }
         }
         return { searchResults, finalResults };
     }

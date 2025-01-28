@@ -3214,64 +3214,64 @@
             "title": "Product Manager",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5378030004?gh_jid=5378030004",
             "location": "Remote",
-            "description": "Join us as a Product Manager at Figma to shape the future of collaborative design tools.",
-            "other": "No explicit seniority mentioned."
+            "description": "Product Management position involving key responsibilities in planning and execution across a product's lifecycle.",
+            "other": "This role may involve working with cross-functional teams to deliver strategic goals."
           },
           {
             "title": "Product Manager, AI",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5398993004?gh_jid=5398993004",
             "location": "Remote",
-            "description": "Work as a Product Manager, AI to lead innovative projects leveraging AI technologies.",
-            "other": "No explicit seniority mentioned."
+            "description": "Work on AI-driven product management processes, focusing on integrating AI technologies into existing products.",
+            "other": "Requires a strong grasp of AI concepts and how they can be leveraged in product development."
           },
           {
             "title": "Product Manager, Billing",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5367153004?gh_jid=5367153004",
             "location": "Remote",
-            "description": "Drive the evolution of billing systems as a Product Manager, focusing on user experience and financial operations.",
-            "other": "No explicit seniority mentioned."
+            "description": "Handle billing aspects of product management, ensuring users have seamless transaction experiences.",
+            "other": "Focus may be on improving billing systems, processes, and user experience."
           },
           {
             "title": "Product Manager, Data & ML Infrastructure",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5184792004?gh_jid=5184792004",
             "location": "Remote",
-            "description": "Join Figma in enhancing data and machine learning infrastructure as a Product Manager.",
-            "other": "No explicit seniority mentioned."
+            "description": "Manage data and machine learning infrastructure components of products.",
+            "other": "Needs experience or interest in data infrastructures and ML frameworks."
           },
           {
             "title": "Product Manager, Design Systems Foundations",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5205988004?gh_jid=5205988004",
             "location": "Remote",
-            "description": "Help redefine design systems as a Product Manager, connecting users to creative possibilities.",
-            "other": "No explicit seniority mentioned."
+            "description": "Focus on the foundations of design systems and how they integrate into products.",
+            "other": "Involves working closely with design and engineering teams."
           },
           {
             "title": "Product Manager, Developer Tools",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5403160004?gh_jid=5403160004",
             "location": "Remote",
-            "description": "Focus on empowering developers with cutting-edge tools as a Product Manager.",
-            "other": "No explicit seniority mentioned."
+            "description": "Concentrate on the development and refinement of tools for developers.",
+            "other": "This requires collaboration with developer teams and understanding of their workflow needs."
           },
           {
             "title": "Product Manager, FigJam",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5424863004?gh_jid=5424863004",
             "location": "Remote",
-            "description": "Lead the FigJam product strategy to enhance collaboration and creativity among teams.",
-            "other": "No explicit seniority mentioned."
+            "description": "Oversee the FigJam product, ensuring it meets the needs of users through product updates and strategies.",
+            "other": "Looking for creative input on product direction."
           },
           {
             "title": "Product Manager, New Product Area",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5272210004?gh_jid=5272210004",
             "location": "Remote",
-            "description": "Innovate within an uncharted product area as a Product Manager at Figma.",
-            "other": "No explicit seniority mentioned."
+            "description": "Manage the lifecycle of a new product area, from concept to market release.",
+            "other": "Ideal for those interested in spearheading new initiatives."
           },
           {
             "title": "Product Manager, Prototyping",
             "application_link": "https://boards.greenhouse.io/figma/jobs/5373063004?gh_jid=5373063004",
             "location": "Remote",
-            "description": "Shape the future of prototyping solutions at Figma as a Product Manager.",
-            "other": "No explicit seniority mentioned."
+            "description": "Focus on prototyping aspects of product management, enhancing user testing capabilities.",
+            "other": "Involves working with design and development for iterative testing and improvements."
           }
         ],
         "success": true,
@@ -3282,6 +3282,87 @@
           "aiFilter": true
         },
         "count": 9
+      },
+      {
+        "rawJobs": [
+          {
+            "textContent": [
+              "Director, Product - Developer Tools",
+              "Director, Product - Developer Tools"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5425566004?gh_jid=5425566004"
+          },
+          {
+            "textContent": [
+              "Product Manager",
+              "Product Manager"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5378030004?gh_jid=5378030004"
+          },
+          {
+            "textContent": [
+              "Product Manager, AI",
+              "Product Manager, AI"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5398993004?gh_jid=5398993004"
+          },
+          {
+            "textContent": [
+              "Product Manager, Billing",
+              "Product Manager, Billing"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5367153004?gh_jid=5367153004"
+          },
+          {
+            "textContent": [
+              "Product Manager, Data & ML Infrastructure",
+              "Product Manager, Data & ML Infrastructure"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5184792004?gh_jid=5184792004"
+          },
+          {
+            "textContent": [
+              "Product Manager, Design Systems Foundations",
+              "Product Manager, Design Systems Foundations"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5205988004?gh_jid=5205988004"
+          },
+          {
+            "textContent": [
+              "Product Manager, Developer Tools",
+              "Product Manager, Developer Tools"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5403160004?gh_jid=5403160004"
+          },
+          {
+            "textContent": [
+              "Product Manager, FigJam",
+              "Product Manager, FigJam"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5424863004?gh_jid=5424863004"
+          },
+          {
+            "textContent": [
+              "Product Manager, New Product Area",
+              "Product Manager, New Product Area"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5272210004?gh_jid=5272210004"
+          },
+          {
+            "textContent": [
+              "Product Manager, Prototyping",
+              "Product Manager, Prototyping"
+            ],
+            "link": "https://boards.greenhouse.io/figma/jobs/5373063004?gh_jid=5373063004"
+          }
+        ],
+        "success": true,
+        "count": 10,
+        "searchConfig": {
+          "keyword": "product",
+          "roleType": "internship",
+          "source": "scraping"
+        }
       }
     ]
   },
