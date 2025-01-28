@@ -72,7 +72,7 @@ I am always gonna be updating this so keep on pulling the repo to check if this 
 
 ### Configuration
 
-The `config.js` file is used to configure the script. It looks like this:
+The `config.js` file is used to configure the script. Check the example config file provided in `config.example.json` It looks like this:
 
 ```javascript
 {
@@ -90,25 +90,47 @@ The `config.js` file is used to configure the script. It looks like this:
 
 `CompanySearchConfig` can be either `SearchConfig` or `FirecrawlSearchConfig` based on the source.
 
-##### `SearchConfig` Properties
+#### `SearchConfig`
 
-| **Property** | **Type**   | **Required** | **Description**                                      |
-| ------------ | ---------- | ------------ | ---------------------------------------------------- |
-| `keyword`    | `string`   | Yes          | The keyword to search.                               |
-| `source`     | `string`   | Yes          | Either `"api"` or `"scraping"`.                      |
-| `roleType`   | `RoleType` | No           | A `RoleType` object providing role-specific details. |
-| `aiFilter`   | `boolean`  | No           | Indicates whether to apply ChatGPT filtering.        |
+The `SearchConfig` object is used to configure a search using either the API or scraping.
+
+```javascript
+{
+    keyword: string,
+    source: "api" | "scraping",
+    roleType: "apm" | "internship",
+    aiFilter?: boolean
+}
+```
+
+| **Property** | **Type**  | **Required** | **Description**                               |
+| ------------ | --------- | ------------ | --------------------------------------------- |
+| `keyword`    | `string`  | Yes          | The keyword to search.                        |
+| `source`     | `string`  | Yes          | Either `api` or `scraping`.                   |
+| `roleType`   | `string`  | Yes          | Either `apm` or `internship`.                 |
+| `aiFilter`   | `boolean` | No           | Indicates whether to apply ChatGPT filtering. |
 
 ---
 
-##### `FirecrawlSearchConfig` Properties
+##### `FirecrawlSearchConfig`
 
-| **Property**  | **Type**   | **Required** | **Description**                                      |
-| ------------- | ---------- | ------------ | ---------------------------------------------------- |
-| `searchQuery` | `string`   | Yes          | The query for the search.                            |
-| `url`         | `string`   | Yes          | The target URL for the search.                       |
-| `roleType`    | `RoleType` | No           | A `RoleType` object providing role-specific details. |
-| `source`      | `string`   | Yes          | Always `"firecrawl"`.                                |
+The `FirecrawlSearchConfig` object is used to configure a search using Firecrawl.
+
+```javascript
+{
+      searchQuery: string,
+      url: string,
+      roleType?: "apm" | "internship",
+      source: "firecrawl"
+}
+```
+
+| **Property**  | **Type** | **Required** | **Description**                |
+| ------------- | -------- | ------------ | ------------------------------ |
+| `searchQuery` | `string` | Yes          | The query for the search.      |
+| `url`         | `string` | Yes          | The target URL for the search. |
+| `roleType`    | `string` | No           | Either `apm` or `internship`   |
+| `source`      | `string` | Yes          | Always `firecrawl`.            |
 
 ---
 
