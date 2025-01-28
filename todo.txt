@@ -1,0 +1,3 @@
+- walmart add internship filter
+- enhance hubspot firecrawl by iterating over first 3 pages
+- package everything into executable
