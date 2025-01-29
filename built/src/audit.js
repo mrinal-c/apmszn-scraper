@@ -37,7 +37,6 @@ const fs = __importStar(require("node:fs/promises"));
 const kpcb_1 = require("./sources/companies/kpcb");
 const linkedin_1 = require("./sources/companies/linkedin");
 const spotify_1 = require("./sources/companies/spotify");
-const config_1 = require("../config");
 const atlassian_1 = require("./sources/companies/atlassian");
 const instacart_1 = require("./sources/companies/instacart");
 const walmart_1 = require("./sources/companies/walmart");
@@ -49,6 +48,7 @@ const hubspot_1 = require("./sources/companies/hubspot");
 const uipath_1 = require("./sources/companies/uipath");
 const tesla_1 = require("./sources/companies/tesla");
 const ebay_1 = require("./sources/companies/ebay");
+const config_1 = require("../config");
 const scrapers = {
     kpcb: () => new kpcb_1.KPCBAudit(),
     linkedin: () => new linkedin_1.LinkedinAudit(),
@@ -67,11 +67,11 @@ const scrapers = {
 };
 async function runAudit(browser) {
     const results = {};
-    const companyList = Object.keys(config_1.config);
+    const companyList = Object.keys(config_1.auditConfig);
     const jobQueue = createJobQueue(companyList, 1);
     for (const jobSet of jobQueue) {
         await Promise.all(jobSet.map(async (company) => {
-            const auditOutput = await auditHelper(company, browser, config_1.config);
+            const auditOutput = await auditHelper(company, browser, config_1.auditConfig);
             results[company] = auditOutput;
         }));
     }

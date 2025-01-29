@@ -5,7 +5,6 @@ import { CompanyName, Config } from './base/config.type';
 import { KPCBAudit } from './sources/companies/kpcb';
 import { LinkedinAudit } from './sources/companies/linkedin';
 import { SpotifyAudit } from './sources/companies/spotify';
-import { config } from '../config';
 import { AtlassianAudit } from './sources/companies/atlassian';
 import { InstacartAudit } from './sources/companies/instacart';
 import { WalmartAudit } from './sources/companies/walmart';
@@ -17,6 +16,7 @@ import { HubspotAudit } from './sources/companies/hubspot';
 import { UIPathAudit } from './sources/companies/uipath';
 import { TeslaAudit } from './sources/companies/tesla';
 import { EbayAudit } from './sources/companies/ebay';
+import { auditConfig } from '../config';
 
 const scrapers: Record<CompanyName, () => Audit> = {
     kpcb: () => new KPCBAudit(),
@@ -38,13 +38,13 @@ const scrapers: Record<CompanyName, () => Audit> = {
 async function runAudit(browser: Browser): Promise<void> {
     const results: Record<string, AuditOutput> = {};
 
-    const companyList = Object.keys(config);
+    const companyList = Object.keys(auditConfig);
     const jobQueue = createJobQueue(companyList, 1);
 
     for (const jobSet of jobQueue) {
         await Promise.all(
             jobSet.map(async (company: string) => {
-                const auditOutput = await auditHelper(company, browser, config);
+                const auditOutput = await auditHelper(company, browser, auditConfig);
                 results[company] = auditOutput;
             })
         )

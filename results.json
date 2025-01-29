@@ -4972,104 +4972,40 @@
       {
         "rawJobs": [
           {
-            "textContent": [
-              "Product Manager, Enterprise Readiness",
-              "Product",
-              "Atlanta, US",
-              "Austin, US",
-              "Denver, US",
-              "Lisbon, Portugal",
-              "London, UK",
-              "Toronto, Canada"
-            ],
-            "link": "https://boards.greenhouse.io/cloudflare/jobs/6305668?gh_jid=6305668"
-          },
-          {
-            "textContent": [
-              "Senior Director of Product Management, Threat Intelligence",
-              "Product",
-              "Austin, US",
-              "Lisbon, Portugal",
-              "London, UK",
-              "San Francisco, US"
-            ],
-            "link": "https://boards.greenhouse.io/cloudflare/jobs/6242586?gh_jid=6242586"
-          },
-          {
-            "textContent": [
-              "Senior Product Manager, Query Engines & Vector Search",
-              "Emerging Technology and Incubation",
-              "Austin, US",
-              "London, UK",
-              "New York, US",
-              "San Francisco, US"
-            ],
-            "link": "https://boards.greenhouse.io/cloudflare/jobs/5566920?gh_jid=5566920"
-          },
-          {
-            "textContent": [
-              "Senior Product Manager, SASE WARP Device Client",
-              "Product",
-              "Atlanta, US",
-              "Austin, US",
-              "Denver, US",
-              "New York, US",
-              "Seattle, US",
-              "Washington DC, US",
-              "Toronto, Canada"
-            ],
-            "link": "https://boards.greenhouse.io/cloudflare/jobs/6447804?gh_jid=6447804"
-          },
-          {
-            "textContent": [
-              "Vice President of Product Management, Application Performance",
-              "Product",
-              "Austin, US",
-              "London, UK",
-              "New York, US",
-              "San Francisco, US"
-            ],
-            "link": "https://boards.greenhouse.io/cloudflare/jobs/6251219?gh_jid=6251219"
+            "other": "",
+            "title": "Product Manager Intern (Summer 2025)",
+            "location": "Austin, US",
+            "description": "",
+            "application_link": "https://boards.greenhouse.io/cloudflare/jobs/6527418?gh_jid=6527418"
           }
         ],
         "success": true,
-        "count": 5,
+        "count": 1,
         "searchConfig": {
-          "keyword": "N/A",
-          "roleType": "internship",
-          "source": "scraping"
+          "source": "firecrawl",
+          "url": "https://www.cloudflare.com/careers/jobs/?title=intern",
+          "searchQuery": "product internships",
+          "roleType": "internship"
         }
-      },
+      }
+    ],
+    "finalResults": [
       {
         "rawJobs": [
           {
             "other": "",
-            "title": "Product Manager, Enterprise Readiness",
-            "location": "Atlanta, USAustin, USDenver, USLisbon, PortugalLondon, UKToronto, Canada",
+            "title": "Product Manager Intern (Summer 2025)",
+            "location": "Austin, US",
             "description": "",
-            "application_link": "https://boards.greenhouse.io/cloudflare/jobs/6305668?gh_jid=6305668"
-          },
-          {
-            "other": "",
-            "title": "Senior Product Manager, Query Engines & Vector Search",
-            "location": "Austin, USLondon, UKNew York, USSan Francisco, US",
-            "description": "",
-            "application_link": "https://boards.greenhouse.io/cloudflare/jobs/5566920?gh_jid=5566920"
-          },
-          {
-            "other": "",
-            "title": "Senior Product Manager, SASE WARP Device Client",
-            "location": "Atlanta, USAustin, USDenver, USNew York, USSeattle, USWashington DC, USToronto, Canada",
-            "description": "",
-            "application_link": "https://boards.greenhouse.io/cloudflare/jobs/6447804?gh_jid=6447804"
+            "application_link": "https://boards.greenhouse.io/cloudflare/jobs/6527418?gh_jid=6527418"
           }
         ],
         "success": true,
-        "count": 3,
+        "count": 1,
         "searchConfig": {
           "source": "firecrawl",
-          "url": "https://www.cloudflare.com/careers/jobs/?department=Product",
-          "searchQuery": "product manager roles",
+          "url": "https://www.cloudflare.com/careers/jobs/?title=intern",
+          "searchQuery": "product internships",
           "roleType": "internship"
         }
       }

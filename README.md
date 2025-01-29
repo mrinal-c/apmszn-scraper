@@ -18,7 +18,7 @@ This is an MVP of an AI-Powered Job Search. This is work in progress so the repo
 
 1. Clone the repository.
    ```bash
-   git clone https://github.com/your-repo/project-name.git
+   git clone https://github.com/mrinal-c/apmszn-scraper.git
    ```
 2. Open the repository in terminal and install the required packages.
 
@@ -120,7 +120,7 @@ The `FirecrawlSearchConfig` object is used to configure a search using Firecrawl
 {
       searchQuery: string,
       url: string,
-      roleType?: "apm" | "internship",
+      roleType: "apm" | "internship",
       source: "firecrawl"
 }
 ```
@@ -129,18 +129,25 @@ The `FirecrawlSearchConfig` object is used to configure a search using Firecrawl
 | ------------- | -------- | ------------ | ------------------------------ |
 | `searchQuery` | `string` | Yes          | The query for the search.      |
 | `url`         | `string` | Yes          | The target URL for the search. |
-| `roleType`    | `string` | No           | Either `apm` or `internship`   |
+| `roleType`    | `string` | Yes           | Either `apm` or `internship`   |
 | `source`      | `string` | Yes          | Always `firecrawl`.            |
 
 ---
 
 ## Usage
 
-1. Create a configuration file in the root directory. You can use the `config.example.js` file as a template. You should read [Configuration](#configuration) to understand how to configure the file.
-2. Run the script using the following command:
+1. Create a configuration file in the root directory. You can use the `config.ts` file as a template. You should read [Configuration](#configuration) to understand how to configure the file.
+2. Open a new terminal window. Quit your Chrome app if it is running. Then run the Chrome script using the following command:
+   ```bash
+   ./scripts/chrome.sh
+   ```
+2. Open a new terminal window (Separate from the Chrome process). Run the audit script using the following command:
    ```bash
    npm start
    ```
 3. Check the terminal output for updates. All job listings will be saved in the results.json directory.
 
 NOTE: Let's say you have 3 companies initially in config and you run the script. The script will save the results in a file called `results.json`. If you add more companies to the config file and run the script again, the script will append the new results to the existing `results.json` file, NOT overwrite the results. This allows you to rerun the script multiple times without losing any data.
+
+## Notes
+IMPORTANT: Using the API Keys and Firecrawl credits, we can only run the script a limited number of times. Please use it judiciously. If you run out of credits, please let me know and we can load more.

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.config = void 0;
-exports.config = {
+exports.auditConfig = void 0;
+exports.auditConfig = {
     // linkedin: {
     //   searches: [
     //     {
@@ -73,21 +73,21 @@ exports.config = {
     //     }
     //   ]
     // },
-    figma: {
-        searches: [
-            {
-                keyword: "product",
-                roleType: "apm",
-                source: "scraping",
-                aiFilter: true
-            },
-            {
-                keyword: "product",
-                roleType: "internship",
-                source: "scraping"
-            }
-        ]
-    },
+    // figma: {
+    //   searches: [
+    //     {
+    //       keyword: "product",
+    //       roleType: "apm",
+    //       source: "scraping",
+    //       aiFilter: true
+    //     },
+    //     {
+    //       keyword: "product",
+    //       roleType: "internship",
+    //       source: "scraping"
+    //     }
+    //   ]
+    // },
     // kpcb: {
     //   searches: [
     //     {
@@ -132,16 +132,16 @@ exports.config = {
     //     }
     //   ]
     // },
-    // cloudflare: {
-    //   searches: [
-    //     {
-    //       source: "firecrawl",
-    //       url: "https://www.cloudflare.com/careers/jobs/?department=Product",
-    //       searchQuery: "product internships",
-    //       roleType: "internship"
-    //     }
-    //   ]
-    // },
+    cloudflare: {
+        searches: [
+            {
+                source: "firecrawl",
+                url: "https://www.cloudflare.com/careers/jobs/?title=intern",
+                searchQuery: "product internships",
+                roleType: "internship"
+            }
+        ]
+    },
     // hubspot: {
     //     searches: [
     //       {

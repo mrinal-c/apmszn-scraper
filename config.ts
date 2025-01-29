@@ -1,6 +1,6 @@
 import { Config } from './src/base/config.type'
 
-export const config: Config = {
+export const auditConfig: Config = {
   // linkedin: {
   //   searches: [
   //     {
@@ -72,21 +72,21 @@ export const config: Config = {
   //     }
   //   ]
   // },
-  figma: {
-    searches: [
-      {
-        keyword: "product",
-        roleType: "apm",
-        source: "scraping",
-        aiFilter: true
-      },
-      {
-        keyword: "product",
-        roleType: "internship",
-        source: "scraping"
-      }
-    ]
-  },
+  // figma: {
+  //   searches: [
+  //     {
+  //       keyword: "product",
+  //       roleType: "apm",
+  //       source: "scraping",
+  //       aiFilter: true
+  //     },
+  //     {
+  //       keyword: "product",
+  //       roleType: "internship",
+  //       source: "scraping"
+  //     }
+  //   ]
+  // },
   // kpcb: {
   //   searches: [
   //     {
@@ -131,16 +131,16 @@ export const config: Config = {
   //     }
   //   ]
   // },
-  // cloudflare: {
-  //   searches: [
-  //     {
-  //       source: "firecrawl",
-  //       url: "https://www.cloudflare.com/careers/jobs/?department=Product",
-  //       searchQuery: "product internships",
-  //       roleType: "internship"
-  //     }
-  //   ]
-  // },
+  cloudflare: {
+    searches: [
+      {
+        source: "firecrawl",
+        url: "https://www.cloudflare.com/careers/jobs/?title=intern",
+        searchQuery: "product internships",
+        roleType: "internship"
+      }
+    ]
+  },
   // hubspot: {
   //     searches: [
   //       {

@@ -5,3 +5,4 @@ chrome.sh
 pkg.sh
 built/
 built/**
+run.sh
