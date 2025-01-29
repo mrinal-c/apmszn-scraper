@@ -3,6 +3,4 @@ node_modules/
 dist/
 chrome.sh
 pkg.sh
-built/
-built/**
 run.sh
