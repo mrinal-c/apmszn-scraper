@@ -43,13 +43,13 @@ file that tells the script which companies to look for and such.
 
 1. **API**: Using the company's official careers page API to fetch job listings directly and reliably.
 
-2. **Scraping**: I wrote custom scripts to analyze the company's HTML structure to programmatically navigate forms and pagination to retrieve job listings.
+2. **Scraping**: I wrote custom scripts by analyzing each website by hand to navigate forms and pagination to retrieve job listings.
 
-3. **Firecrawl**: [Firecrawl](https://www.firecrawl.dev/) uses AI for `scraping` data, minimizing coding effort. Note that it is new and may occasionally hallucinate or fail.
+3. **Firecrawl**: [Firecrawl](https://www.firecrawl.dev/) uses AI for scraping data, minimizing coding effort. Basically it does number 2 with the help of AI so it is way faster to implement as a dev but delivers the same value if not more. Note that it is new and may occasionally hallucinate or fail.
 
 ### Search Support
 
-Here’s a table showing whether API, scraping, or Firecrawl is supported for each company, with ✅ for supported and ❌ for not supported:
+Here’s a table showing whether API, scraping, or Firecrawl is supported for each company, with ✅ for supported and ❌ for not supported.:
 
 | **Company** | **API** | **Scraping** | **Firecrawl** |
 | ----------- | ------- | ------------ | ------------- |
@@ -72,11 +72,11 @@ I am always gonna be updating this so keep on pulling the repo to check if this 
 
 ### Configuration
 
-The `config.js` file is used to configure the script. Check the example config file provided in `config.example.json` It looks like this:
+The `config.js` file is used to configure the script. Check the example config file provided in `config.ts` It looks like this:
 
 ```javascript
 {
-    [CompanyName]: {
+    CompanyName: {
         searches: CompanySearchConfig[] (list of search configurations)
     }
 }
@@ -86,7 +86,7 @@ The `config.js` file is used to configure the script. Check the example config f
 
 | **Key**       | **Values**                                                                                                                                            |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CompanyName` | `spotify`, `linkedin`, `kpcb`, `atlassian`, `instacart`, `walmart`, `figma`, `yahoo`, `tinder`, `cloudflare`, `hubspot`, `uipath`, `tesla`, or `ebay` |
+| `CompanyName` | `spotify`, `linkedin`, `kpcb`, `atlassian`, `instacart`, `walmart`, `figma`, `yahoo`, `tinder`, `cloudflare`, `hubspot`, `uipath`, `tesla`, `ebay` |
 
 `CompanySearchConfig` can be either `SearchConfig` or `FirecrawlSearchConfig` based on the source.
 
