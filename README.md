@@ -148,5 +148,9 @@ The idea is that I have only hand-constructed a few websites for scraping, and t
 
 - **Read the Docs**: I try to be as detailed as possible, but I hope most answers are here! Reach out to me with anything else
 - **Check for Updates**: Frequently pull to get the updated code -> there will be an automatic update notifier in slack whenever I update the code
-- **Start Small**: Start with one or two searches to get yourself familiar with the configuration and flow of the script
-- **Test Out Websites**: Don't feed Firecrawl with URLs without visiting them yourself. Ensure data can easily be extracted from the website and is relevant. I don't think Firecrawl can fill out forms and navigate pages yet
+- **Start Small**: Start with one or two searches to get yourself familiar with the configuration and flow of the script. The example has a bunch, so don't feel like you have to run all at once.
+- **Incremental Audits**: Once again, you don't have to run 20 site audits at once. The results append to one another, not overwrite, so you can run 5-10 in succession and all results will be accumulated in the results files.
+- **Test Out Websites**: Don't feed Firecrawl with URLs without visiting them yourself. Ensure data can easily be extracted from the website and is relevant. I don't think Firecrawl can fill out forms and navigate pages yet. Sites that work well
+   - Are simple (Lever and Greenhouse job pages are beautiful - use them to test)
+   - Don't have popups or many ads
+   - Prefill form entries by having data in the search query: I don't think Firecrawl is too good at interacting with the page so `https://www.tesla.com/careers/search/?query=product&type=3&site=US` is way better than `https://www.tesla.com/careers/search`
