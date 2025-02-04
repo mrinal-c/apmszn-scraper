@@ -10,11 +10,10 @@ class KPCBAudit {
         const searchResults = [];
         const finalResults = [];
         for (const searchConfig of searches) {
-            const { source } = searchConfig;
             const data = await this.helper(browser, searchConfig);
-            searchResults.push(data);
-            if (source !== "firecrawl" && searchConfig.aiFilter) {
-                console.log("AI filtering for Figma");
+            if ('rawJobs' in data) {
+                searchResults.push(data);
+                console.log("AI filtering for KBCP");
                 const processed = await (0, gpt_1.filterJobs)(data);
                 finalResults.push(processed);
             }
@@ -35,7 +34,7 @@ class KPCBAudit {
         else if (source === "firecrawl") {
             const { searchQuery, url } = searchConfig;
             console.log("Firecrawl KPCB on search query: ", searchQuery);
-            const data = await (0, kpcb_2.fcSearch)(url, searchQuery);
+            const data = await (0, kpcb_2.firecrawl)(url, searchQuery);
             return { ...data, searchConfig };
         }
         else if (source === "api") {

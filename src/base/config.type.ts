@@ -1,25 +1,20 @@
 import { RoleType } from "./audit.type";
-export type SearchSource = "api" | "scraping" | "firecrawl";
-export type CompanyName = "spotify" | "linkedin" | "kpcb" | "atlassian" | "instacart" | "walmart" | "figma" | "yahoo" | "tinder" | "cloudflare" | "hubspot" | "uipath" | "tesla" | "ebay";
+export type SearchSource = "scraping" | "firecrawl" | "scraping+ai";
+export type ScrapeCompanyName = "spotify" | "linkedin" | "kpcb" | "atlassian" | "instacart" | "walmart" | "figma" | "yahoo" | "tinder" | "cloudflare" | "hubspot" | "uipath" | "tesla" | "ebay";
 
-export type SearchConfig = {
+export type ScrapingSearchConfig = {
     keyword: string;
-    source: "api" | "scraping";
+    source: "scraping+ai";
     roleType: RoleType;
-    llmMessage?: string;
-    aiFilter?: boolean;
+    company: ScrapeCompanyName;
 }
 
 export type FirecrawlSearchConfig = {
     searchQuery: string;
+    customQuery?: string;
     url: string;
     roleType: RoleType;
     source: "firecrawl";
+    company: string;
 }
-export type CompanySearchConfig = SearchConfig | FirecrawlSearchConfig;
-
-export type Config = {
-    [K in CompanyName]?: {
-        searches: CompanySearchConfig[]
-    }
-}
+export type SearchConfig = ScrapingSearchConfig | FirecrawlSearchConfig;

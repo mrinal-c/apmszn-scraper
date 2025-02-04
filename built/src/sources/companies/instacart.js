@@ -9,11 +9,10 @@ class InstacartAudit {
         const searchResults = [];
         const finalResults = [];
         for (const searchConfig of searches) {
-            const { source } = searchConfig;
             const data = await this.helper(browser, searchConfig);
-            searchResults.push(data);
-            if (source !== "firecrawl" && searchConfig.aiFilter) {
-                console.log("AI filtering for Figma");
+            if ('rawJobs' in data) {
+                searchResults.push(data);
+                console.log("AI filtering for Instacart");
                 const processed = await (0, gpt_1.filterJobs)(data);
                 finalResults.push(processed);
             }

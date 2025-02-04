@@ -33,73 +33,31 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = __importStar(require("node:fs/promises"));
-const kpcb_1 = require("./sources/companies/kpcb");
-const linkedin_1 = require("./sources/companies/linkedin");
-const spotify_1 = require("./sources/companies/spotify");
-const atlassian_1 = require("./sources/companies/atlassian");
-const instacart_1 = require("./sources/companies/instacart");
-const walmart_1 = require("./sources/companies/walmart");
-const figma_1 = require("./sources/companies/figma");
-const yahoo_1 = require("./sources/companies/yahoo");
-const tinder_1 = require("./sources/companies/tinder");
-const cloudflare_1 = require("./sources/companies/cloudflare");
-const hubspot_1 = require("./sources/companies/hubspot");
-const uipath_1 = require("./sources/companies/uipath");
-const tesla_1 = require("./sources/companies/tesla");
-const ebay_1 = require("./sources/companies/ebay");
+const fs = __importStar(require("fs"));
+const csv = __importStar(require("fast-csv"));
 const config_1 = require("../config");
-const scrapers = {
-    kpcb: () => new kpcb_1.KPCBAudit(),
-    linkedin: () => new linkedin_1.LinkedinAudit(),
-    spotify: () => new spotify_1.SpotifyAudit(),
-    atlassian: () => new atlassian_1.AtlassianAudit(),
-    instacart: () => new instacart_1.InstacartAudit(),
-    walmart: () => new walmart_1.WalmartAudit(),
-    figma: () => new figma_1.FigmaAudit(),
-    yahoo: () => new yahoo_1.YahooAudit(),
-    tinder: () => new tinder_1.TinderAudit(),
-    cloudflare: () => new cloudflare_1.CloudflareAudit(),
-    hubspot: () => new hubspot_1.HubspotAudit(),
-    uipath: () => new uipath_1.UIPathAudit(),
-    tesla: () => new tesla_1.TeslaAudit(),
-    ebay: () => new ebay_1.EbayAudit()
-};
+const promises_1 = require("fs/promises");
+const search_1 = require("./search");
 async function runAudit(browser) {
-    const results = {};
-    const companyList = Object.keys(config_1.auditConfig);
-    const jobQueue = createJobQueue(companyList, 1);
+    const results = [];
+    const jobQueue = createJobQueue(config_1.auditConfig, 3);
     for (const jobSet of jobQueue) {
-        await Promise.all(jobSet.map(async (company) => {
-            const auditOutput = await auditHelper(company, browser, config_1.auditConfig);
-            results[company] = auditOutput;
+        await Promise.all(jobSet.map(async (searchConfig) => {
+            const searchResult = await (0, search_1.search)({ searchConfig, browser });
+            results.push(searchResult);
         }));
     }
-    await saveAuditOutput(results);
-}
-/**
- *
- * @param company company name
- * @param browser browser reference
- * @param results where we are storing audit results
- * @param config config object for company specific stuff
- */
-async function auditHelper(company, browser, config) {
-    const createScraper = scrapers[company];
-    const scraper = createScraper();
-    const { searches } = config[company];
-    const auditOutput = await scraper.audit({ browser, searches });
-    return auditOutput;
+    await saveResults(results);
 }
 /**
  * @param [maxConcurrency=3] maximum number of concurrent jobs, defaults to 3
  * @returns jobQueue - a 2D array, where each element is an array of concurrent jobs that will be run together
  */
-function createJobQueue(companyList, maxConcurrency = 3) {
+function createJobQueue(searchList, maxConcurrency = 3) {
     const jobQueue = [];
     let tempQueue = [];
-    for (const company of companyList) {
-        tempQueue.push(company);
+    for (const searchConfig of searchList) {
+        tempQueue.push(searchConfig);
         if (tempQueue.length === maxConcurrency) {
             jobQueue.push(tempQueue);
             tempQueue = [];
@@ -110,19 +68,46 @@ function createJobQueue(companyList, maxConcurrency = 3) {
     }
     return jobQueue;
 }
-async function saveAuditOutput(newResults) {
-    try {
-        const fileContent = await fs.readFile('results.json', 'utf-8');
-        const currentResults = fileContent.trim() ? JSON.parse(fileContent) : {};
-        const updatedResults = currentResults;
-        for (const [key, result] of Object.entries(newResults)) {
-            updatedResults[key] = result;
-        }
-        await fs.writeFile('results.json', JSON.stringify(updatedResults, null, 2));
-        console.log("Audit results written to results.json");
+async function saveResults(newResults) {
+    //get current data
+    if (!fs.existsSync('results/results.json')) {
+        fs.writeFileSync('results/results.json', '[]', 'utf-8');
     }
-    catch (error) {
-        console.error(`Failed to update audit results:`, error);
+    const fileContent = await (0, promises_1.readFile)('results/results.json', 'utf-8');
+    const currentResults = fileContent.trim() ? JSON.parse(fileContent) : [];
+    //merge results
+    const results = newResults;
+    const companies = new Set();
+    newResults.forEach((result) => companies.add(result.searchConfig.company));
+    currentResults.forEach((result) => {
+        const { company } = result.searchConfig;
+        if (companies.has(company))
+            return;
+        results.push(result);
+    });
+    const timestamp = new Date().toISOString();
+    //format for csv
+    const csvResults = [];
+    for (const result of results) {
+        const { searchConfig, jobs } = result;
+        const { source: searchSource, company, roleType } = searchConfig;
+        const entries = jobs.map((job) => {
+            const j = job;
+            return { ...j, searchSource, company, roleType, timestamp, searchConfig: JSON.stringify(searchConfig) };
+        });
+        csvResults.push(...entries);
     }
+    //save to json
+    await (0, promises_1.writeFile)('results/results.json', JSON.stringify(results, null, 2));
+    console.log("Audit results written to results.json");
+    //format and save
+    const csvStream = csv.format({ headers: true });
+    const writableStream = fs.createWriteStream('results/results.csv');
+    csvStream.pipe(writableStream);
+    for (const row of csvResults) {
+        csvStream.write(row);
+    }
+    csvStream.end();
+    console.log("Audit results written to results.csv");
 }
 exports.default = runAudit;
