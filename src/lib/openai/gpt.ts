@@ -1,7 +1,7 @@
 import { client } from "./client";
 import { z } from "zod";
 import { zodResponseFormat } from "openai/helpers/zod";
-import { ProcessedData, ProcessedJob, RawData, RawJob } from "../../base/audit.type";
+import {  Job, ProcessedJob, RawJob, SearchResult } from "../../base/audit.type";
 
 const JobSchema = z.object({
   jobs: z.array(z.object({
@@ -23,17 +23,18 @@ const internshipCondition = `- Job MUST explicitly have something to do with a P
 
 
 
-export async function filterJobs(rawData: RawData): Promise<ProcessedData> {
-  const { rawJobs, searchConfig } = rawData;
+export async function filterJobs(searchResult: SearchResult): Promise<SearchResult> {
+  const { jobs, searchConfig } = searchResult;
+  console.log(`AI Filtering jobs from ${searchConfig.company} search`)
 
   const { roleType } = searchConfig;
   const CHUNK_SIZE = 10; // Adjust based on expected token size per job
-  const chunks: RawJob[][] = [];
+  const chunks: Job[][] = [];
   const validJobs: ProcessedJob[] = [];
 
   // Split the jobs into smaller chunks
-  for (let i = 0; i < rawJobs.length; i += CHUNK_SIZE) {
-    chunks.push(rawJobs.slice(i, i + CHUNK_SIZE));
+  for (let i = 0; i < jobs.length; i += CHUNK_SIZE) {
+    chunks.push(jobs.slice(i, i + CHUNK_SIZE));
   }
 
   for (const chunk of chunks) {
@@ -64,6 +65,7 @@ export async function filterJobs(rawData: RawData): Promise<ProcessedData> {
     success: true,
     searchConfig,
     count: validJobs.length,
+    source: "scraping+ai"
   };
 }
 

@@ -19,15 +19,16 @@ const apmCondition = `- Job MUST explicitly have something to do with Product Ma
 const internshipCondition = `- Job MUST explicitly have something to do with a Product internship, or product fellowship in the title \
                     - Job CANNOT have "senior" or any other word that implies more experience. We are looking for Internship and Fellowship roles. \
                     - Job MUST be located Remote or in the United States of America`;
-async function filterJobs(rawData) {
-    const { rawJobs, searchConfig } = rawData;
+async function filterJobs(searchResult) {
+    const { jobs, searchConfig } = searchResult;
+    console.log(`AI Filtering jobs from ${searchConfig.company} search`);
     const { roleType } = searchConfig;
     const CHUNK_SIZE = 10; // Adjust based on expected token size per job
     const chunks = [];
     const validJobs = [];
     // Split the jobs into smaller chunks
-    for (let i = 0; i < rawJobs.length; i += CHUNK_SIZE) {
-        chunks.push(rawJobs.slice(i, i + CHUNK_SIZE));
+    for (let i = 0; i < jobs.length; i += CHUNK_SIZE) {
+        chunks.push(jobs.slice(i, i + CHUNK_SIZE));
     }
     for (const chunk of chunks) {
         const userInput = { rawJobs: chunk };
@@ -54,5 +55,6 @@ async function filterJobs(rawData) {
         success: true,
         searchConfig,
         count: validJobs.length,
+        source: "scraping+ai"
     };
 }
