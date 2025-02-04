@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as csv from 'fast-csv';
 import { Browser } from "puppeteer-core";
-import { auditConfig } from '../config.example';
+import { auditConfig } from '../config';
 import { readFile, writeFile } from 'fs/promises';
 import { SearchConfig } from './base/config.type';
 import { CSVSearchResult, Job, ProcessedJob, SearchResult } from './base/audit.type';

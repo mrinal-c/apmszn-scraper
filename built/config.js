@@ -2,223 +2,85 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.auditConfig = void 0;
 exports.auditConfig = [
-    // {
-    //   company: "linkedin",
-    //   source: "scraping+ai",
-    //   keyword: "product",
-    //   roleType: "apm"
-    // },
-    // {
-    //   company: "spotify",
-    //   source: "scraping+ai",
-    //   keyword: "product",
-    //   roleType: "internship"
-    // },
+    {
+        company: "spotify",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "instacart",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "figma",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "kpcb",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "atlassian",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "linkedin",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "walmart",
+        source: "scraping+ai",
+        roleType: "apm",
+        keyword: "product"
+    },
+    {
+        company: "kpcb",
+        source: "scraping+ai",
+        roleType: "internship",
+        keyword: "product"
+    },
     {
         company: "tesla",
         source: "firecrawl",
-        roleType: "apm",
-        searchQuery: "all product manager/product management jobs",
-        url: "https://www.tesla.com/careers/search/?query=product&site=US"
+        roleType: "internship",
+        searchQuery: "product related internships",
+        url: "https://www.tesla.com/careers/search/?query=product&type=3&site=US"
+    },
+    {
+        company: "spotify",
+        source: "scraping+ai",
+        roleType: "internship",
+        keyword: "product"
+    },
+    {
+        company: "tinder",
+        source: "scraping+ai",
+        roleType: "internship",
+        keyword: "product"
+    },
+    {
+        company: "uipath",
+        source: "firecrawl",
+        roleType: "internship",
+        searchQuery: "product related internships",
+        url: "https://careers.uipath.com/careers/jobs?keywords=intern&sortBy=relevance&page=1"
+    },
+    {
+        company: "hubspot",
+        source: "firecrawl",
+        roleType: "internship",
+        searchQuery: "product related internships",
+        url: "https://www.hubspot.com/careers/jobs?hubs_signup-url=www.hubspot.com%2Fcareers%2Fstudents%2Fintern-coop&hubs_signup-cta=careers-interncoop-bottom&page=1#roleType=intern"
     }
 ];
-// {
-//   linkedin: {
-//     searches: [
-//       {
-//         keyword: "product",
-//         roleType: "apm",
-//         source: "scraping"
-//       }
-//     ]
-//   },
-// spotify: {
-//   searches: [
-//     {
-//       keyword: "N/A",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-//     {
-//       keyword: "N/A",
-//       roleType: "internship",
-//       source: "scraping"
-//     },
-//     {
-//       roleType: "internship",
-//       source: "firecrawl",
-//       searchQuery: "product internships",
-//       url: "https://www.lifeatspotify.com/jobs?c=product&c=students&l=boston&l=los-angeles&l=new-york"
-//     }
-//   ]
-// },
-// atlassian: {
-//   searches: [
-//     {
-//       keyword: "N/A",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-//     {
-//       keyword: "N/A",
-//       roleType: "internship",
-//       source: "scraping"
-//     }
-//   ]
-// },
-// instacart: {
-//   searches: [
-//     {
-//       keyword: "product",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-//     {
-//       keyword: "product",
-//       roleType: "internship",
-//       source: "scraping"
-//     }
-//   ]
-// },
-// walmart: {
-//   searches: [
-//     {
-//       keyword: "product",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-//     {
-//       keyword: "product",
-//       roleType: "internship",
-//       source: "scraping"
-//     }
-//   ]
-// },
-// figma: {
-//   searches: [
-//     {
-//       keyword: "product",
-//       roleType: "apm",
-//       source: "scraping",
-//       aiFilter: true
-//     },
-//     {
-//       keyword: "product",
-//       roleType: "internship",
-//       source: "scraping"
-//     }
-//   ]
-// },
-// kpcb: {
-//   searches: [
-//     {
-//       keyword: "N/A",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-//     {
-//       roleType: "internship",
-//       source: "firecrawl",
-//       searchQuery: "product internships or fellowships",
-//       url: "https://jobs.ashbyhq.com/kleinerperkinsfellows"
-//     }
-//   ]
-// },
-// yahoo: {
-//   searches: [
-//     {
-//       keyword: "product",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-//     {
-//       roleType: "internship",
-//       source: "scraping",
-//       keyword: "product"
-//     }
-//   ]
-// },
-// tinder: {
-//   searches: [
-//     {
-//       keyword: "product",
-//       roleType: "apm",
-//       source: "scraping"
-//     },
-// {
-//   roleType: "internship",
-//   source: "firecrawl",
-//   url: "https://www.lifeattinder.com/?departments=product&job-type=internship#open-positions",
-//   searchQuery: "product internships"
-// }
-//   ]
-// },
-// cloudflare: {
-//   searches: [
-//     {
-//       source: "firecrawl",
-//       url: "https://www.cloudflare.com/careers/jobs/?title=intern",
-//       searchQuery: "product internships",
-//       roleType: "internship"
-//     }
-//   ]
-// },
-// hubspot: {
-//     searches: [
-//       {
-//         source: "firecrawl",
-//         url: "https://www.hubspot.com/careers/jobs?page=1#office=san-francisco,cambridge,remote;department=product-ux-engineering;roleType=intern;",
-//         searchQuery: "product internships",
-//         roleType: "internship"
-//       },
-//       {
-//         source: "firecrawl",
-//         url: "https://www.hubspot.com/careers/jobs?page=1#office=san-francisco,cambridge,remote;department=product-ux-engineering",
-//         searchQuery: "software engineering and engineering manager roles",
-//         roleType: "apm"
-//       }
-//     ]
-//   },
-// uipath: {
-//   searches: [
-//     {
-//       source: "firecrawl",
-//       url: "https://careers.uipath.com/careers/jobs?sortBy=relevance&page=1&categories=Product&limit=100&keywords=intern",
-//       searchQuery: "product internships",
-//       roleType: "internship"
-//     },
-//     {
-//       source: "firecrawl",
-//       url: "https://careers.uipath.com/careers/jobs?sortBy=relevance&page=1&categories=Product&limit=100",
-//       searchQuery: "product management roles",
-//       roleType: "apm"
-//     }
-//   ]
-// },
-// tesla: {
-//   searches: [
-//     // {
-//     //   source: "firecrawl",
-//     //   url: "https://www.tesla.com/careers/search/?query=product&type=3&site=US",
-//     //   searchQuery: "product internships",
-//     //   roleType: "internship"
-//     // },
-//     {
-//       source: "firecrawl",
-//       url: "https://www.tesla.com/careers/search/?query=product%20manage&site=US",
-//       searchQuery: "any product or design roles",
-//       roleType: "apm"
-//     }
-//   ]
-// },
-// ebay: {
-//   searches: [
-//     {
-//       source: "firecrawl",
-//       url: "https://app.ripplematch.com/v2/public/company/ebay/",
-//       searchQuery: "all internships on this page",
-//       roleType: "internship"
-//     }
-//   ]
-// },
-// }

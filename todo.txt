@@ -1,6 +1,1 @@
-- walmart add internship filter
-- enhance hubspot firecrawl by iterating over first 3 pages
-
-
-
-- update readme
+- make it so that keywords for scraping+ai are also used by gpt
