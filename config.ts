@@ -33,25 +33,26 @@ export const auditConfig: SearchConfig[] = [
   //   roleType: "apm",
   //   keyword: "product"
   // },
-  {
-    company: "atlassian",
-    source: "scraping+ai",
-    roleType: "apm",
-    keyword: "product",
-    jobConditions: ["Any full time role dealing with product or product design"]
-  },
+  // {
+  //   company: "atlassian",
+  //   source: "scraping+ai",
+  //   roleType: "apm",
+  //   keyword: "product",
+  //   jobConditions: ["Any full time role dealing with product or product design"]
+  // },
   // {
   //   company: "linkedin",
   //   source: "scraping+ai",
   //   roleType: "apm",
   //   keyword: "product"
   // },
-  // {
-  //   company: "walmart",
-  //   source: "scraping+ai",
-  //   roleType: "apm",
-  //   keyword: "product"
-  // },
+  {
+    company: "walmart",
+    source: "scraping+ai",
+    roleType: "apm",
+    keyword: "product",
+    jobConditions: ["Job must be product manager"]
+  },
   // {
   //   company: "kpcb",
   //   source: "scraping+ai",

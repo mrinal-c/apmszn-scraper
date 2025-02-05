@@ -85,6 +85,7 @@ async function saveResults(newResults) {
         });
         csvResults.push(...entries);
     }
+    csvResults.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
     //save to json
     await (0, promises_1.writeFile)('results/results.json', JSON.stringify(finalResults, null, 2));
     await (0, promises_1.writeFile)('results/raw-results.json', JSON.stringify(rawResults, null, 2));

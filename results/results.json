@@ -2,6 +2,51 @@
   {
     "jobs": [
       {
+        "title": "Product Manager III",
+        "application_link": "https://careers.walmart.com/us/jobs/WD2088533-product-manager-iii",
+        "location": "BENTONVILLE, AR",
+        "description": "Product Manager III positions are ideal for emerging professionals who are looking to manage products and develop their career in product management. The role involves overseeing product development cycles and requires collaboration with cross-functional teams to deliver impactful products.",
+        "other": "Category: Product Management; Date Posted: 01/28/25"
+      },
+      {
+        "title": "Product Manager III",
+        "application_link": "https://careers.walmart.com/us/jobs/WD2041278-usa-product-manager-iii",
+        "location": "BENTONVILLE, AR",
+        "description": "(USA) Product Manager III in BENTONVILLE, AR. Apply for a dynamic role in product management.",
+        "other": "Job posted on 12/16/24."
+      },
+      {
+        "title": "Product Manager III",
+        "application_link": "https://careers.walmart.com/us/jobs/WD2054750-usa-product-manager-iii",
+        "location": "BENTONVILLE, AR",
+        "description": "(USA) Product Manager III in BENTONVILLE, AR. Apply for a dynamic role in product management.",
+        "other": "Job posted on 12/16/24."
+      },
+      {
+        "title": "Product Manager III",
+        "application_link": "https://careers.walmart.com/us/jobs/WD2009840-usa-product-manager-iii",
+        "location": "BENTONVILLE, AR",
+        "description": "(USA) Product Manager III in BENTONVILLE, AR. Apply for a dynamic role in product management.",
+        "other": "Job posted on 10/11/24."
+      }
+    ],
+    "success": true,
+    "searchConfig": {
+      "company": "walmart",
+      "source": "scraping+ai",
+      "roleType": "apm",
+      "keyword": "product",
+      "jobConditions": [
+        "Job must be product manager"
+      ]
+    },
+    "count": 4,
+    "source": "scraping+ai",
+    "timestamp": "2025-02-05T23:44:12.122Z"
+  },
+  {
+    "jobs": [
+      {
         "title": "SEO Marketing Associate, 2025 Graduate U.S.",
         "application_link": "https://www.atlassian.com/company/careers/details/17744",
         "location": "San Francisco or Remote",

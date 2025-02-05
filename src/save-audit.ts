@@ -59,6 +59,7 @@ export async function saveResults(newResults: SearchResult[]) {
         })
         csvResults.push(...entries)
     }
+    csvResults.sort((a: CSVSearchResult, b: CSVSearchResult) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
 
     //save to json
     await writeFile('results/results.json', JSON.stringify(finalResults, null, 2));
