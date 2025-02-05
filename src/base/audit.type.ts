@@ -6,6 +6,7 @@ export type RoleType = "apm" | "internship";
 export type SearchInput = {
     browser: Browser;
     searchConfig: SearchConfig;
+    timestamp: string;
 };
 
 export type ScrapedJob = {
@@ -31,7 +32,8 @@ export type SearchResult = {
     message?: string,
     count?: number,
     source: SearchSource
-    searchConfig?: SearchConfig
+    searchConfig?: SearchConfig,
+    timestamp?: string
 }
 
 export type CSVSearchResult = {

@@ -16,7 +16,7 @@ async function scrape(browser, keyword) {
         await (0, utils_1.delay)(1000);
         // pagination - they dont have any!!!
         //find all job cards and store in variable
-        const jobCardSelector = "div.accordion div.card-body div.jobs-section";
+        const jobCardSelector = "div.accordion div.card div.collapse div.jobs-section";
         const jobCards = await page.$$(jobCardSelector);
         // Extract text content and link from each job card
         const jobs = await Promise.all(jobCards.map(async (jobCard) => {

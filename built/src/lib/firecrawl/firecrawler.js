@@ -5,7 +5,7 @@ const zod_1 = require("zod");
 const client_1 = require("./client");
 async function firecrawl(searchConfig) {
     const { url, searchQuery, company, customQuery } = searchConfig;
-    console.log(`Starting a firecrawl search on ${company}`);
+    console.log(`Starting FIRECRAWL search on ${company}`);
     const prompt = customQuery ? customQuery :
         `Extract all job positions related to ${searchQuery}. Include title and application link as required fields. Optionally include location, salary, visa, and description if available. Search across the first 3 pages of the site if possible.`;
     const schema = zod_1.z.object({

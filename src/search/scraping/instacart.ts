@@ -27,7 +27,7 @@ export async function scrape(browser: Browser, keyword: string): Promise<SearchR
         // pagination - they dont have any!!!
 
         //find all job cards and store in variable
-        const jobCardSelector = "div.accordion div.card-body div.jobs-section";
+        const jobCardSelector = "div.accordion div.card div.collapse div.jobs-section";
         const jobCards = await page.$$(jobCardSelector);
 
         // Extract text content and link from each job card

@@ -1,0 +1,175 @@
+[
+  {
+    "jobs": [
+      {
+        "textContent": [
+          "Sales Development Representative, 2025 Graduate U.S.",
+          "Sales Development Representative, 2025 Graduate U.S.",
+          "Austin or Remote"
+        ],
+        "link": "https://www.atlassian.com/company/careers/details/15880"
+      },
+      {
+        "textContent": [
+          "SEO Marketing Associate, 2025 Graduate U.S.",
+          "SEO Marketing Associate, 2025 Graduate U.S.",
+          "San Francisco or Remote"
+        ],
+        "link": "https://www.atlassian.com/company/careers/details/17744"
+      },
+      {
+        "textContent": [
+          "AI Researcher, 2025 Graduate U.S.",
+          "AI Researcher, 2025 Graduate U.S.",
+          "San Francisco or Remote"
+        ],
+        "link": "https://www.atlassian.com/company/careers/details/17350"
+      },
+      {
+        "textContent": [
+          "Email Campaign Associate, 2025 Graduate U.S.",
+          "Email Campaign Associate, 2025 Graduate U.S.",
+          "San Francisco or Remote"
+        ],
+        "link": "https://www.atlassian.com/company/careers/details/16179"
+      }
+    ],
+    "success": true,
+    "count": 4,
+    "source": "scraping",
+    "searchConfig": {
+      "company": "atlassian",
+      "source": "scraping+ai",
+      "roleType": "apm",
+      "keyword": "product",
+      "jobConditions": [
+        "Any full time role dealing with product or product design"
+      ]
+    },
+    "timestamp": "2025-02-05T20:00:25.176Z"
+  },
+  {
+    "jobs": [
+      {
+        "textContent": [
+          "Engagement Marketing Manager, CRM",
+          "Engagement Marketing Manager, CRM",
+          "United States - Remote",
+          "Apply",
+          "Apply"
+        ],
+        "link": "https://instacart.careers/job/?id=6541853"
+      },
+      {
+        "textContent": [
+          "Senior Marketing Manager I, Paid Social",
+          "Senior Marketing Manager I, Paid Social",
+          "United States - Remote",
+          "Apply",
+          "Apply"
+        ],
+        "link": "https://instacart.careers/job/?id=6171779"
+      }
+    ],
+    "success": true,
+    "count": 2,
+    "source": "scraping",
+    "searchConfig": {
+      "company": "instacart",
+      "source": "scraping+ai",
+      "roleType": "apm",
+      "keyword": "marketing",
+      "jobConditions": [
+        "Job must deal with marketing"
+      ]
+    },
+    "timestamp": "2025-02-05T19:57:50.187Z"
+  },
+  {
+    "jobs": [
+      {
+        "textContent": [
+          "Director, Product - Developer Tools",
+          "Director, Product - Developer Tools"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5425566004?gh_jid=5425566004"
+      },
+      {
+        "textContent": [
+          "Product Manager",
+          "Product Manager"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5378030004?gh_jid=5378030004"
+      },
+      {
+        "textContent": [
+          "Product Manager, AI",
+          "Product Manager, AI"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5398993004?gh_jid=5398993004"
+      },
+      {
+        "textContent": [
+          "Product Manager, Billing",
+          "Product Manager, Billing"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5367153004?gh_jid=5367153004"
+      },
+      {
+        "textContent": [
+          "Product Manager, Data & ML Infrastructure",
+          "Product Manager, Data & ML Infrastructure"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5184792004?gh_jid=5184792004"
+      },
+      {
+        "textContent": [
+          "Product Manager, Design Systems Foundations",
+          "Product Manager, Design Systems Foundations"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5205988004?gh_jid=5205988004"
+      },
+      {
+        "textContent": [
+          "Product Manager, Developer Tools (London, United Kingdom)",
+          "Product Manager, Developer Tools (London, United Kingdom)"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5430634004?gh_jid=5430634004"
+      },
+      {
+        "textContent": [
+          "Product Manager, FigJam",
+          "Product Manager, FigJam"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5424863004?gh_jid=5424863004"
+      },
+      {
+        "textContent": [
+          "Product Manager, New Product Area",
+          "Product Manager, New Product Area"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5272210004?gh_jid=5272210004"
+      },
+      {
+        "textContent": [
+          "Product Manager, Prototyping",
+          "Product Manager, Prototyping"
+        ],
+        "link": "https://boards.greenhouse.io/figma/jobs/5373063004?gh_jid=5373063004"
+      }
+    ],
+    "success": true,
+    "count": 10,
+    "source": "scraping",
+    "searchConfig": {
+      "company": "figma",
+      "source": "scraping+ai",
+      "roleType": "apm",
+      "keyword": "product",
+      "jobConditions": [
+        "Job must have something to do with product management"
+      ]
+    },
+    "timestamp": "2025-02-05T19:57:50.187Z"
+  }
+]

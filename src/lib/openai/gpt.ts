@@ -1,7 +1,8 @@
 import { client } from "./client";
 import { z } from "zod";
 import { zodResponseFormat } from "openai/helpers/zod";
-import {  Job, ProcessedJob, RawJob, SearchResult } from "../../base/audit.type";
+import { Job, ProcessedJob, RawJob, RoleType, SearchResult } from "../../base/audit.type";
+import { ScrapingSearchConfig } from "@/src/base/config.type";
 
 const JobSchema = z.object({
   jobs: z.array(z.object({
@@ -13,21 +14,27 @@ const JobSchema = z.object({
   }))
 });
 
-const apmCondition = `- Job MUST explicitly have something to do with Product Management, Product Owner, or Product Manager in the title \
-                    - Job CANNOT have "senior" or any other word that implies more experience. We are looking for New Grad, Junior, Associate, and Entry Level roles. If a role does not contain a seniority qualifier, consider it to be valid. \
-                    - Job MUST be located Remote or in the United States of America`;
+function buildConditions(roleType: RoleType, aiQueries: string[]) {
+  const baseConditions = [
+    "Job CANNOT have 'senior' or any other word that implies more experience. We are looking for " +
+    (roleType === "apm"
+      ? "New Grad, Junior, Associate, and Entry Level roles."
+      : "Internship and Fellowship roles."),
+    "Job MUST be located Remote or in the United States of America.",
+  ];
 
-const internshipCondition = `- Job MUST explicitly have something to do with a Product internship, or product fellowship in the title \
-                    - Job CANNOT have "senior" or any other word that implies more experience. We are looking for Internship and Fellowship roles. \
-                    - Job MUST be located Remote or in the United States of America`;
+  const queryConditions = aiQueries.map((query) => `- ${query}`);
+  return [...queryConditions, ...baseConditions].join("\n");
+}
+
 
 
 
 export async function filterJobs(searchResult: SearchResult): Promise<SearchResult> {
   const { jobs, searchConfig } = searchResult;
-  console.log(`AI Filtering jobs from ${searchConfig.company} search`)
+  console.log(`Starting AI FILTER for jobs from ${searchConfig.company} search`)
 
-  const { roleType } = searchConfig;
+  const { roleType, jobConditions } = searchConfig as ScrapingSearchConfig;
   const CHUNK_SIZE = 10; // Adjust based on expected token size per job
   const chunks: Job[][] = [];
   const validJobs: ProcessedJob[] = [];
@@ -46,7 +53,7 @@ export async function filterJobs(searchResult: SearchResult): Promise<SearchResu
           role: "system",
           content: `You are an expert at structured data extraction. You will be given unstructured data from a job site \
                   audit and should filter it and convert it into the given structure. Here is the criteria for a valid job: \
-                    ${roleType === "apm" ? apmCondition : internshipCondition}`,
+                    ${buildConditions(roleType, jobConditions)}`,
         },
         { role: "user", content: JSON.stringify(userInput) },
       ],

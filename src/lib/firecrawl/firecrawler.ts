@@ -6,7 +6,7 @@ import { SearchResult } from "../../base/audit.type";
 
 export async function firecrawl(searchConfig: FirecrawlSearchConfig): Promise<SearchResult> {
     const { url, searchQuery, company, customQuery } = searchConfig;
-    console.log(`Starting a firecrawl search on ${company}`)
+    console.log(`Starting FIRECRAWL search on ${company}`)
 
     const prompt = customQuery ? customQuery :
         `Extract all job positions related to ${searchQuery}. Include title and application link as required fields. Optionally include location, salary, visa, and description if available. Search across the first 3 pages of the site if possible.`

@@ -15,7 +15,7 @@ import { scrape as yahooScrape } from "./yahoo";
 export async function scrape(input: SearchInput): Promise<SearchResult> {
     const { searchConfig, browser } = input;
     const { company, roleType, keyword } = searchConfig as ScrapingSearchConfig;
-    console.log(`Starting scrape on ${company} for ${roleType} roles with keyword: ${keyword}`)
+    console.log(`Starting SCRAPE on ${company} for ${roleType} roles with keyword: ${keyword}`)
     if (company == "atlassian") {
         return await atlassianScrape(browser, roleType)
     } else if (company == "cloudflare") {

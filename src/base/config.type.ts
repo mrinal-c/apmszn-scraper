@@ -7,6 +7,7 @@ export type ScrapingSearchConfig = {
     source: "scraping+ai";
     roleType: RoleType;
     company: ScrapeCompanyName;
+    jobConditions?: string[]
 }
 
 export type FirecrawlSearchConfig = {

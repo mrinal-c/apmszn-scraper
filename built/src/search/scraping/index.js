@@ -14,7 +14,7 @@ const yahoo_1 = require("./yahoo");
 async function scrape(input) {
     const { searchConfig, browser } = input;
     const { company, roleType, keyword } = searchConfig;
-    console.log(`Starting scrape on ${company} for ${roleType} roles with keyword: ${keyword}`);
+    console.log(`Starting SCRAPE on ${company} for ${roleType} roles with keyword: ${keyword}`);
     if (company == "atlassian") {
         return await (0, atlassian_1.scrape)(browser, roleType);
     }

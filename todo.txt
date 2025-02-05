@@ -1,1 +1,2 @@
-- make it so that keywords for scraping+ai are also used by gpt
+- explain gpt search conditions
+- explain how companies are only looking at specific product urls

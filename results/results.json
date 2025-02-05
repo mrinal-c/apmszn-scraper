@@ -1,85 +1,116 @@
 [
   {
-    "jobs": [],
+    "jobs": [
+      {
+        "title": "SEO Marketing Associate, 2025 Graduate U.S.",
+        "application_link": "https://www.atlassian.com/company/careers/details/17744",
+        "location": "San Francisco or Remote",
+        "description": "SEO Marketing Associate responsible for assisting in developing and executing marketing strategies through SEO.",
+        "other": "Position is suitable for new graduates in 2025."
+      },
+      {
+        "title": "Email Campaign Associate, 2025 Graduate U.S.",
+        "application_link": "https://www.atlassian.com/company/careers/details/16179",
+        "location": "San Francisco or Remote",
+        "description": "Email Campaign Associate tasked with supporting the development and implementation of email marketing campaigns.",
+        "other": "Position is suitable for new graduates in 2025."
+      }
+    ],
+    "success": true,
+    "searchConfig": {
+      "company": "atlassian",
+      "source": "scraping+ai",
+      "roleType": "apm",
+      "keyword": "product",
+      "jobConditions": [
+        "Any full time role dealing with product or product design"
+      ]
+    },
+    "count": 2,
+    "source": "scraping+ai",
+    "timestamp": "2025-02-05T20:00:25.176Z"
+  },
+  {
+    "jobs": [
+      {
+        "title": "Engagement Marketing Manager, CRM",
+        "application_link": "https://instacart.careers/job/?id=6541853",
+        "location": "United States - Remote",
+        "description": "Engagement Marketing Manager, CRM",
+        "other": "Engagement Marketing Manager, CRM"
+      }
+    ],
     "success": true,
     "searchConfig": {
       "company": "instacart",
       "source": "scraping+ai",
       "roleType": "apm",
-      "keyword": "product"
+      "keyword": "marketing",
+      "jobConditions": [
+        "Job must deal with marketing"
+      ]
     },
-    "count": 0,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "searchConfig": {
-      "company": "spotify",
-      "source": "scraping+ai",
-      "roleType": "apm",
-      "keyword": "product"
-    },
-    "count": 0,
-    "source": "scraping+ai"
+    "count": 1,
+    "source": "scraping+ai",
+    "timestamp": "2025-02-05T19:57:50.187Z"
   },
   {
     "jobs": [
       {
         "title": "Product Manager",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5378030004?gh_jid=5378030004",
-        "location": "USA",
-        "description": "Product Manager role focused on managing and strategizing product features and enhancements.",
-        "other": "Candidate should be a new grad or have entry-level experience."
+        "location": "Remote",
+        "description": "Product management role suitable for new grads or junior level. Located remotely.",
+        "other": "The role involves managing various aspects of product development and coordinating with different teams."
       },
       {
         "title": "Product Manager, AI",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5398993004?gh_jid=5398993004",
-        "location": "USA",
-        "description": "Product Manager role specializing in Artificial Intelligence product development.",
-        "other": "Ideal for someone with junior or entry-level experience."
+        "location": "Remote",
+        "description": "Role involves working with AI technologies, suitable for entry-level or junior product managers. Position is remote.",
+        "other": "This job offers a chance to work on innovative AI projects and requires coordination with cross-functional teams."
       },
       {
         "title": "Product Manager, Billing",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5367153004?gh_jid=5367153004",
-        "location": "USA",
-        "description": "Role involves managing the billing system product features and improvements.",
-        "other": "Suitable for new grads or entry-level candidates."
+        "location": "Remote",
+        "description": "Entry-level product manager role focusing on billing systems, available remotely.",
+        "other": "Responsibilities include working on billing systems and processes, collaborating with development and finance teams."
       },
       {
         "title": "Product Manager, Data & ML Infrastructure",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5184792004?gh_jid=5184792004",
-        "location": "USA",
-        "description": "Manage and develop the Data & Machine Learning Infrastructure products.",
-        "other": "Looking for someone with junior or associate level experience."
+        "location": "Remote",
+        "description": "Position focuses on managing data and machine learning infrastructure. Suitable for associate product managers.",
+        "other": "This role involves handling infrastructure projects related to data and machine learning."
       },
       {
         "title": "Product Manager, Design Systems Foundations",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5205988004?gh_jid=5205988004",
-        "location": "USA",
-        "description": "Responsible for design systems foundations product management.",
-        "other": "New graduates or entry-level experience preferable."
+        "location": "Remote",
+        "description": "Role entails managing design systems, ideal for junior-level product managers. The position is remote.",
+        "other": "Tasks include managing design systems foundations, working closely with design and engineering teams."
       },
       {
         "title": "Product Manager, FigJam",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5424863004?gh_jid=5424863004",
-        "location": "USA",
-        "description": "Focus on managing and enhancing FigJam product features.",
-        "other": "Open to new grads and those with entry-level experience."
+        "location": "Remote",
+        "description": "Product management opportunity focused on FigJam, perfect for new graduates or associates.",
+        "other": "Work involves managing product aspects related to FigJam, collaborating with multi-disciplinary teams."
       },
       {
         "title": "Product Manager, New Product Area",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5272210004?gh_jid=5272210004",
-        "location": "USA",
-        "description": "Responsible for spearheading a new product area development.",
-        "other": "Suitable for new grads or those with limited product management experience."
+        "location": "Remote",
+        "description": "Work in a new product area suitable for entry-level product managers. The job is remote.",
+        "other": "The role requires exploring and managing new product areas in development, suitable for those looking to innovate."
       },
       {
         "title": "Product Manager, Prototyping",
         "application_link": "https://boards.greenhouse.io/figma/jobs/5373063004?gh_jid=5373063004",
-        "location": "USA",
-        "description": "Manage the prototyping aspects of product development.",
-        "other": "Candidates should be at an entry-level or associate level."
+        "location": "Remote",
+        "description": "Entry-level role focused on product prototyping. It is available remotely.",
+        "other": "Duties include managing prototyping processes and working closely with the design and development teams."
       }
     ],
     "success": true,
@@ -87,233 +118,13 @@
       "company": "figma",
       "source": "scraping+ai",
       "roleType": "apm",
-      "keyword": "product"
+      "keyword": "product",
+      "jobConditions": [
+        "Job must have something to do with product management"
+      ]
     },
     "count": 8,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "searchConfig": {
-      "company": "kpcb",
-      "source": "scraping+ai",
-      "roleType": "apm",
-      "keyword": "product"
-    },
-    "count": 0,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "searchConfig": {
-      "company": "atlassian",
-      "source": "scraping+ai",
-      "roleType": "apm",
-      "keyword": "product"
-    },
-    "count": 0,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [
-      {
-        "title": "Product Manager, Core AI",
-        "application_link": "https://www.linkedin.com/jobs/view/4076930391/?eBP=NON_CHARGEABLE_CHANNEL&refId=oaJ3EgHpCtpdpXtR5kruSg%3D%3D&trackingId=Ij1YHcP7YW8uA3UnLXsryw%3D%3D&trk=flagship3_search_srp_jobs",
-        "location": "Mountain View, CA (Hybrid)",
-        "description": "Product Manager, Core AI with verification",
-        "other": "1 month ago, Easy Apply"
-      },
-      {
-        "title": "Product Manager, Feed Relevance",
-        "application_link": "https://www.linkedin.com/jobs/view/4114772991/?eBP=NON_CHARGEABLE_CHANNEL&refId=oaJ3EgHpCtpdpXtR5kruSg%3D%3D&trackingId=B9wWoNx%2FXJxwEcw32dmiDQ%3D%3D&trk=flagship3_search_srp_jobs",
-        "location": "Mountain View, CA (Hybrid)",
-        "description": "Product Manager, Feed Relevance with verification",
-        "other": "Easy Apply"
-      },
-      {
-        "title": "Product Manager, New Segment Growth",
-        "application_link": "https://www.linkedin.com/jobs/view/4048767701/?eBP=NON_CHARGEABLE_CHANNEL&refId=oaJ3EgHpCtpdpXtR5kruSg%3D%3D&trackingId=HqklqQL42qrJNjBzq2hGOw%3D%3D&trk=flagship3_search_srp_jobs",
-        "location": "Mountain View, CA (Hybrid)",
-        "description": "Product Manager, New Segment Growth with verification",
-        "other": "2 weeks ago, Easy Apply"
-      },
-      {
-        "title": "Product Manager - Premium Small Business",
-        "application_link": "https://www.linkedin.com/jobs/view/4095351111/?eBP=NON_CHARGEABLE_CHANNEL&refId=oaJ3EgHpCtpdpXtR5kruSg%3D%3D&trackingId=Pw6UDxU%2F7pjig2%2FOzz4G5w%3D%3D&trk=flagship3_search_srp_jobs",
-        "location": "Mountain View, CA (Hybrid)",
-        "description": "Product Manager - Premium Small Business with verification",
-        "other": "1 month ago, Easy Apply"
-      },
-      {
-        "title": "Associate Technical Services Manager",
-        "application_link": "https://www.linkedin.com/jobs/view/4102598025/?eBP=NON_CHARGEABLE_CHANNEL&refId=oaJ3EgHpCtpdpXtR5kruSg%3D%3D&trackingId=UveaHBv6xTAVSOEE3BxksQ%3D%3D&trk=flagship3_search_srp_jobs",
-        "location": "Sunnyvale, CA (Hybrid)",
-        "description": "Associate Technical Services Manager\nAssociate Technical Services Manager with verification\nLinkedIn\nSunnyvale, CA (Hybrid)\n$85K/yr - $140K/yr\n312 company alumni work here\n3 weeks ago\nEasy Apply",
-        "other": "LinkedIn, Sunnyvale, CA (Hybrid)"
-      }
-    ],
-    "success": true,
-    "searchConfig": {
-      "company": "linkedin",
-      "source": "scraping+ai",
-      "roleType": "apm",
-      "keyword": "product"
-    },
-    "count": 5,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "searchConfig": {
-      "company": "kpcb",
-      "source": "scraping+ai",
-      "roleType": "internship",
-      "keyword": "product"
-    },
-    "count": 0,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "count": 0,
-    "source": "firecrawl",
-    "searchConfig": {
-      "company": "tesla",
-      "source": "firecrawl",
-      "roleType": "internship",
-      "searchQuery": "product related internships",
-      "url": "https://www.tesla.com/careers/search/?query=product&type=3&site=US"
-    }
-  },
-  {
-    "jobs": [
-      {
-        "title": "Product Manager III",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2088533-product-manager-iii",
-        "location": "BENTONVILLE, AR",
-        "description": "Product Manager III in Product Management, located at Bentonville, AR.",
-        "other": "The role is positioned as an entry-level Product Manager III position, focused on product management with potential opportunities for career advancement."
-      },
-      {
-        "title": "(USA) Product Manager III",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2041278-usa-product-manager-iii",
-        "location": "BENTONVILLE, AR",
-        "description": "Product Management",
-        "other": "Date Posted: 12/16/24"
-      },
-      {
-        "title": "(USA) Product Manager III",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2054750-usa-product-manager-iii",
-        "location": "BENTONVILLE, AR",
-        "description": "Product Management",
-        "other": "Date Posted: 12/16/24"
-      },
-      {
-        "title": "(USA) Product Manager III",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2009840-usa-product-manager-iii",
-        "location": "BENTONVILLE, AR",
-        "description": "Product Management",
-        "other": "Date Posted: 10/11/24"
-      },
-      {
-        "title": "(USA) Product Manager",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2082680-usa-product-manager",
-        "location": "Remote",
-        "description": "Join our dynamic team as a Product Manager, where you will engage in a hands-on role coordinating projects and bringing innovative ideas. Develop a lasting impact and grow in a supportive environment.",
-        "other": "Walmart is seeking talented Product Managers interested in developing their careers in a collaborative and challenging environment, available for remote work in the USA."
-      },
-      {
-        "title": "Associate Product Manager",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2082671-associate-product-manager",
-        "location": "SAN BRUNO, CA",
-        "description": "Join our product team as an Associate Product Manager. This is a great opportunity to assist in product delivery and learn from experienced team members in an entry-level role.",
-        "other": "This position offers a ground-level entry into product management within USA operations, available in San Bruno, CA."
-      },
-      {
-        "title": "Junior Product Manager",
-        "application_link": "https://careers.walmart.com/us/jobs/WD2082663-junior-product-manager",
-        "location": "BENTONVILLE, AR",
-        "description": "Take on responsibilities as a Junior Product Manager, working closely with teams to implement and support product strategies.",
-        "other": "Walmart offers dynamic roles for new graduates looking to enter the field of product management, focusing on innovation and growth from our Bentonville, AR office."
-      }
-    ],
-    "success": true,
-    "searchConfig": {
-      "company": "walmart",
-      "source": "scraping+ai",
-      "roleType": "apm",
-      "keyword": "product"
-    },
-    "count": 7,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "count": 0,
-    "source": "firecrawl",
-    "searchConfig": {
-      "company": "uipath",
-      "source": "firecrawl",
-      "roleType": "internship",
-      "searchQuery": "product related internships",
-      "url": "https://careers.uipath.com/careers/jobs?keywords=intern&sortBy=relevance&page=1"
-    }
-  },
-  {
-    "jobs": [
-      {
-        "title": "2025 Summer Internship, Business Strategy and Product Management, MBA (New York City)",
-        "application_link": "https://www.lifeatspotify.com/jobs/2025-summer-internship-business-strategy-and-product-management-mba-new-york-city",
-        "location": "New York",
-        "description": "Internship opportunity focusing on Business Strategy and Product Management, suitable for MBA students, based in New York City.",
-        "other": ""
-      },
-      {
-        "title": "2025 Summer Internship, Product & Technology (New York City)",
-        "application_link": "https://www.lifeatspotify.com/jobs/2025-summer-internship-product-technology-new-york-city",
-        "location": "New York",
-        "description": "Internship role for Product & Technology development, available in New York City.",
-        "other": ""
-      }
-    ],
-    "success": true,
-    "searchConfig": {
-      "company": "spotify",
-      "source": "scraping+ai",
-      "roleType": "internship",
-      "keyword": "product"
-    },
-    "count": 2,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "searchConfig": {
-      "company": "tinder",
-      "source": "scraping+ai",
-      "roleType": "internship",
-      "keyword": "product"
-    },
-    "count": 0,
-    "source": "scraping+ai"
-  },
-  {
-    "jobs": [],
-    "success": true,
-    "count": 0,
-    "source": "firecrawl",
-    "searchConfig": {
-      "company": "hubspot",
-      "source": "firecrawl",
-      "roleType": "internship",
-      "searchQuery": "product related internships",
-      "url": "https://www.hubspot.com/careers/jobs?hubs_signup-url=www.hubspot.com%2Fcareers%2Fstudents%2Fintern-coop&hubs_signup-cta=careers-interncoop-bottom&page=1#roleType=intern"
-    }
+    "source": "scraping+ai",
+    "timestamp": "2025-02-05T19:57:50.187Z"
   }
 ]
