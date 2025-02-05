@@ -97,7 +97,7 @@ The `config.ts` file is used to configure the script. Check the example config f
 
 | **Property**    | **Type**           | **Required** | **Description**                                                                                                     |
 | --------------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------- |
-| `keyword`       | `string`           | Yes          | The keyword to search.                                                                                              |
+| `keyword`       | `string`           | Yes          | The keyword to search. This is what would go into the search bar when you are visiting the site normally. Only `instacart`, `linkedin`, `tinder`, `walmart`, and `yahoo` support this, the other companies have no search bar on the website! They just have categorical filters, like "Product" jobs or something which I have prefilled to the appropriate category.                                                                                             |
 | `source`        | `string`           | Yes          | Always `scraping+ai`.                                                                                               |
 | `roleType`      | `string`           | Yes          | Either `apm` or `internship`.                                                                                       |
 | `company`       | `CompanyName`      | Yes          | One of `spotify`, `linkedin`, `kpcb`, `atlassian`, `instacart`, `walmart`, `figma`, `yahoo`, `tinder`, `cloudflare` |
